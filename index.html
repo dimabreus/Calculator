@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="calculator">
+            <div class="result">
+                <p id="result">0</p>
+            </div>
+
+            <div class="items">
+                <div class="item">
+                    <button onclick="clearValue()">
+                        <span>С</span>
+                    </button>
+                </div>
+
+                <div class="item">
+                    <button onclick="deleteLast()">
+                        <span>&larr;</span>
+                    </button>
+                </div>
+
+                <div class="item action">
+                    <button onclick="addChar('/')">
+                        <span>&divide;</span>
+                    </button>
+                </div>
+
+                <div class="item">
+                    <button onclick="addChar('7')">
+                        <span>7</span>
+                    </button>
+                </div>
+
+                <div class="item">
+                    <button onclick="addChar('8')">
+                        <span>8</span>
+                    </button>
+                </div>
+
+                <div class="item">
+                    <button onclick="addChar('9')">
+                        <span>9</span>
+                    </button>
+                </div>
+
+                <div class="item action">
+                    <button onclick="addChar('*')">
+                        <span>&times;</span>
+                    </button>
+                </div>
+
+                <div class="item">
+                    <button onclick="addChar('4')">
+                        <span>4</span>
+                    </button>
+                </div>
+
+                <div class="item">
+                    <button onclick="addChar('5')">
+                        <span>5</span>
+                    </button>
+                </div>
+
+                <div class="item">
+                    <button onclick="addChar('6')">
+                        <span>6</span>
+                    </button>
+                </div>
+
+                <div class="item action">
+                    <button onclick="addChar('-')">
+                        <span>-</span>
+                    </button>
+                </div>
+
+                <div class="item">
+                    <button onclick="addChar('1')">
+                        <span>1</span>
+                    </button>
+                </div>
+
+                <div class="item">
+                    <button onclick="addChar('2')">
+                        <span>2</span>
+                    </button>
+                </div>
+
+                <div class="item">
+                    <button onclick="addChar('3')">
+                        <span>3</span>
+                    </button>
+                </div>
+
+                <div class="item action">
+                    <button onclick="addChar('+')">
+                        <span>+</span>
+                    </button>
+                </div>
+
+                <div class="item">
+                    <button onclick="addChar('0')">
+                        <span>0</span>
+                    </button>
+                </div>
+
+                <div class="item action">
+                    <button onclick="resolve()">
+                        <span>=</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

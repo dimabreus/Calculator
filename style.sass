@@ -1,0 +1,102 @@
+@use "sass:math"
+
+$item-size: 2rem
+$item-gap: .5rem
+$wrapper-padding: 2.5rem
+
+*
+    box-sizing: border-box
+
+    font-family: "Dosis", sans-serif
+    font-optical-sizing: auto
+    font-weight: 600
+    font-style: normal
+
+body
+    background: linear-gradient(135deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)
+
+    margin: 0
+    padding: 0
+
+    width: 100vw
+    height: 100vh
+
+    overflow: hidden
+
+button
+    border: none
+    background: transparent
+    border-radius: 5px
+    padding: 0.5rem
+    cursor: pointer
+
+.wrapper
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+    &>.calculator
+        display: flex
+        flex-direction: column
+        gap: .5rem
+
+        width: ($item-size + math.div($item-gap, 4) * 3) * 4 + $wrapper-padding * 2
+        height: ($item-size + $item-gap) * 4 + $wrapper-padding * 4
+        background: rgba(255, 255, 255, 0.3)
+        border-radius: 15px
+        padding: math.div($wrapper-padding, 2) $wrapper-padding
+
+        &>.result
+            width: 100%
+            height: 3rem
+
+            background: #fff9ed
+            border-radius: 5px
+
+            text-align: right
+            padding-inline: $item-gap
+
+            &>p
+                overflow: hidden
+                white-space: nowrap
+                text-overflow: ellipsis
+
+        &>.items
+            display: grid
+            grid-template-columns: repeat(4, 2rem)
+            grid-auto-flow: dense
+            gap: $item-gap
+
+            &>.item
+                width: $item-size
+                height: $item-size
+                transition: all 0.15s
+
+                & button
+                    width: 100%
+                    height: 100%
+
+                    background: #fff9ed
+                    transition: background-color .15s linear
+
+                &:first-child
+                    width: $item-size * 2 + $item-gap
+                    grid-column: span 2
+
+                &:nth-last-child(2)
+                    width: ($item-size + math.div($item-gap, 3) * 2) * 3
+                    grid-column: span 3
+
+                &:active
+                    transform: scale(0.9)
+
+                &:hover button
+                    background: #f9ca6b
+
+                &.action
+                    & button
+                        background: #e73d82
+                    &:hover button
+                        background: #f8639f
